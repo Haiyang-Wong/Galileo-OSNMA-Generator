@@ -1,8 +1,8 @@
 # Galileo-OSNMA-Generator
-This project  provides an example of implementing the TSF attack, including forging navigation data forgery, tags and subframes. This example is based on the subframes of the satellite with PRN 02 extracted from the test vectors (16\_AUG\_2023\_GST\_05\_00\_01.csv) provided by EUSPA.
+This project provides examples of forging Galileo navigation messages containing OSNMA data, including forging navigation data forgery, tags and subframes. This example is based on the subframes of the satellite with PRN 02 extracted from the test vectors (16\_AUG\_2023\_GST\_05\_00\_01.csv) provided by EUSPA.
 
 
-
+### Message forgery example
 #### Forging navigation data
 We select the first subframe (WN = 1251, TOW = 277200) as an example and modify its ionospheric parameters, which are located on the $13$-th page of the subframe.
 Below are the original and modified bits of the $13$-th page:
@@ -58,5 +58,8 @@ Below are the data of the first page in the subframe (TOW = 2772300) after repla
 $0x021333662A4249DD4A6EBB4CAE1900BD2A5C9E\\
 8497BA6AAAAA6A9778C100$ (replaced CRC)
 
+### Disclaimer
 
+This project is intended solely for academic research and controlled testing purposes. It provides only the software logic necessary for constructing Galileo navigation messages containing OSNMA data. It does **not** include any capabilities for GNSS signal modulation, over-the-air transmission, or real-time spoofing.
+The authors do **not** encourage or condone any misuse of this code outside of secure, isolated test environments. By using this repository, you agree to take full responsibility for compliance with all applicable laws and regulations in your jurisdiction.
 
